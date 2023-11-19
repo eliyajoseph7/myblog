@@ -14,6 +14,7 @@ import { RegisterComponent } from './admin/auth/register/register.component';
 import { DashboardComponent } from './admin/dashboard/dashboard/dashboard.component';
 import { SidenavComponent } from './admin/layouts/sidenav/sidenav.component';
 import { AdminModule } from './admin/admin.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { AdminModule } from './admin/admin.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    AdminModule
+    AdminModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -6,20 +6,22 @@ import { LoginComponent } from './admin/auth/login/login.component';
 import { RegisterComponent } from './admin/auth/register/register.component';
 import { DashboardComponent } from './admin/dashboard/dashboard/dashboard.component';
 import { GuestComponent } from './admin/layouts/guest/guest.component';
+import { authGuard } from './guards/auth-guard/auth.guard';
+import { loggedinGuard } from './guards/loggedin-guard/loggedin.guard';
 
 const routes: Routes = [
   {
     path: '', component: IndexComponent
   },
   {
-    path: 'auth', component: GuestComponent,
+    path: 'auth', component: GuestComponent, canActivate: [loggedinGuard],
     children: [
       { path: 'login', component: LoginComponent  },
-      { path: 'register', component: RegisterComponent  },
+      { path: 'create-account', component: RegisterComponent  },
     ]
   },
   {
-    path: 'admin', component: AppComponent,
+    path: 'admin', component: AppComponent, canActivate: [authGuard],
     children: [
       { path: 'dashboard', component: DashboardComponent }
     ]

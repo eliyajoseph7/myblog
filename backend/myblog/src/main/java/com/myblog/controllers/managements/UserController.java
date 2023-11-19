@@ -1,4 +1,4 @@
-package com.myblog.controllers;
+package com.myblog.controllers.managements;
 
 import com.myblog.models.User;
 import com.myblog.services.UserService;

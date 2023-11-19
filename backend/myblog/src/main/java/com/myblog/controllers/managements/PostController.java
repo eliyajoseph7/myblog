@@ -1,4 +1,4 @@
-package com.myblog.controllers;
+package com.myblog.controllers.managements;
 
 import com.myblog.models.Post;
 import com.myblog.services.PostService;
@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping(path = "/api/v1/posts")
+@RequestMapping(path = "/api/v1/managements/posts")
 public class PostController {
 
     final private PostService postService;

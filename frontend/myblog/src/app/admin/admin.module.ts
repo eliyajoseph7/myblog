@@ -7,6 +7,7 @@ import { RegisterComponent } from './auth/register/register.component';
 import { DashboardComponent } from './dashboard/dashboard/dashboard.component';
 import { SidenavComponent } from './layouts/sidenav/sidenav.component';
 import { GuestComponent } from './layouts/guest/guest.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -20,7 +21,8 @@ import { GuestComponent } from './layouts/guest/guest.component';
     GuestComponent],
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    ReactiveFormsModule
   ]
 })
 export class AdminModule { }
