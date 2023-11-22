@@ -1,1 +1,25 @@
-<p>sidenav works!</p>
+<div class="h-screen w-full flex">
+    <div class="w-[50px] pt-5 h-screen bg-[#EAF1FB]">
+        <button class="text-center w-full text-2xl pb-5" (click)="toggleMenu()">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="w-6 h-6 mx-auto">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+
+        </button>
+        <a [routerLink]="['/']" routerLinkActive="router-link-active" class="pt-5">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="mx-auto w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+            </svg>
+        </a>
+    </div>
+
+    <div class="w-[270px] bg-gray-100 px-2" [ngClass]="{'hidden': !showMenu}">
+        <div class="flex h-10 mt-[2vh]">
+            <!-- <img src="assets/logo/ejtz.png" class="h-full"> -->
+            <span class="text-3xl logo">🇹🇿 ejTz</span>
+        </div>
+    </div>
+</div>

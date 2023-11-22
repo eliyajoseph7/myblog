@@ -8,6 +8,7 @@ import { DashboardComponent } from './dashboard/dashboard/dashboard.component';
 import { SidenavComponent } from './layouts/sidenav/sidenav.component';
 import { GuestComponent } from './layouts/guest/guest.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { HeaderComponent } from './layouts/header/header.component';
 
 
 
@@ -18,7 +19,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     RegisterComponent,
     DashboardComponent,
     SidenavComponent,
-    GuestComponent],
+    GuestComponent,
+    HeaderComponent],
   imports: [
     CommonModule,
     RouterModule,
