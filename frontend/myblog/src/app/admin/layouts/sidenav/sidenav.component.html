@@ -1,5 +1,5 @@
 <div class="h-screen w-full flex">
-    <div class="w-[50px] pt-5 h-screen bg-[#EAF1FB]">
+    <div class="w-[50px] pt-8 h-screen bg-[#EAF1FB]">
         <button class="text-center w-full text-2xl pb-5" (click)="toggleMenu()">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                 stroke="currentColor" class="w-6 h-6 mx-auto">
@@ -17,9 +17,9 @@
     </div>
 
     <div class="w-[270px] bg-gray-100 px-2" [ngClass]="{'hidden': !showMenu}">
-        <div class="flex h-10 mt-[2vh]">
+        <div class="flex h-16 mt-[2vh] items-center">
             <!-- <img src="assets/logo/ejtz.png" class="h-full"> -->
-            <span class="text-3xl logo">🇹🇿 ejTz</span>
+            <span class="text-4xl logo">🇹🇿 </span><img src="assets/logo/logo.png" class="h-full" />
         </div>
     </div>
 </div>
