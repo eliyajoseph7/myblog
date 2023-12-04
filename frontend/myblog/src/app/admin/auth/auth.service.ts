@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
+import { Router } from '@angular/router';
+import { catchError, throwError } from 'rxjs';
 
 
 const baseUrl = environment.baseUrl;
@@ -16,12 +18,26 @@ export class AuthService {
     'Content-Type': 'application/json', 
     'X-Requested-Width': 'XMLHttpRequeest', 
   });
-  constructor(private http: HttpClient) { }
+  constructor(
+    private http: HttpClient,
+    private router: Router
+    ) { }
 
 
   login(data: any) {
     try {
-      return this.http.post(loginUrl, data, {headers: this.headers});
+      return this.http.post(loginUrl, data, {headers: this.headers,  observe: 'response'}).pipe(
+        catchError(error => {
+          var status = error.status
+
+          if(status == 403) {
+            // console.log('403');
+            return "error"
+          }
+
+          return error;
+        })
+      );
     } catch (e) {
       console.log(e);
       
@@ -51,6 +67,8 @@ export class AuthService {
     localStorage.removeItem('myblogemail');
     localStorage.removeItem('myblogname');
     localStorage.removeItem('myblogtoken');
+    
+    this.router.navigate(['auth/login'])
   }
 
   get isLogedin() {

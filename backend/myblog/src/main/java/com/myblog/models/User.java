@@ -1,10 +1,7 @@
 package com.myblog.models;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.NoArgsConstructor;
-import lombok.NonNull;
+import lombok.*;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -12,6 +9,8 @@ import org.springframework.security.core.userdetails.UserDetails;
 import java.util.Collection;
 import java.util.List;
 
+@EqualsAndHashCode(callSuper = true)
+@Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
@@ -55,13 +54,13 @@ public class User  extends BaseEntity implements UserDetails {
     }
 
     @Override
-    public String getPassword() {
-        return null;
+    public @NonNull String getPassword() {
+        return password;
     }
 
     @Override
     public String getUsername() {
-        return email;
+        return username;
     }
 
     @Override

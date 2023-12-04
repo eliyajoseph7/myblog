@@ -35,7 +35,8 @@ export class RegisterComponent {
       email: ['', [
         Validators.email,
         Validators.required
-      ]],
+      ]
+    ],
       phone: ['', [Validators.required, Validators.minLength(10), Validators.maxLength(10)]],
       gender: ['', Validators.required],
       username: ['', Validators.required],
@@ -62,11 +63,11 @@ export class RegisterComponent {
     this.submitted = true;
 
     if (this.form.invalid) {
-      console.log('invalid')
+      // console.log('invalid')
       return;
     }
 
-    console.log(JSON.stringify(this.form.value, null, 2));
+    // console.log(JSON.stringify(this.form.value, null, 2));
     this.toRegister();
   }
   toRegister() {

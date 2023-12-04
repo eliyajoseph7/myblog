@@ -2,3 +2,10 @@
 .logo {
     font-family: 'Galada', cursive;
 }
+.nav-level {
+    padding: 10px 0 10px 0;
+    background-color: azure;
+}
+.nav-level li {
+    padding: 10px 0 10px 25px;
+}
