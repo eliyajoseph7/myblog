@@ -4,6 +4,8 @@ import { FooterComponent } from './layouts/footer/footer.component';
 import { NavbarComponent } from './layouts/navbar/navbar.component';
 import { BannerComponent } from './home/contents/banner/banner.component';
 import { IndexComponent } from './home/index/index.component';
+import { MainComponent } from './layouts/main/main.component';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -12,10 +14,12 @@ import { IndexComponent } from './home/index/index.component';
     BannerComponent,
     IndexComponent,
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
+    MainComponent
   ],
   imports: [
     CommonModule,
+    RouterModule
   ],
   exports: [
     NavbarComponent,

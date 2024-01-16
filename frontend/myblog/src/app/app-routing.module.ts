@@ -8,10 +8,14 @@ import { DashboardComponent } from './admin/dashboard/dashboard/dashboard.compon
 import { GuestComponent } from './admin/layouts/guest/guest.component';
 import { authGuard } from './guards/auth-guard/auth.guard';
 import { loggedinGuard } from './guards/loggedin-guard/loggedin.guard';
+import { MainComponent } from './public/layouts/main/main.component';
 
 const routes: Routes = [
   {
-    path: '', component: IndexComponent
+    path: '', component: MainComponent,
+    children: [
+      { path: '', component: IndexComponent }
+    ]
   },
   {
     path: 'auth', component: GuestComponent, canActivate: [loggedinGuard],
