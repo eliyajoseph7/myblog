@@ -6,6 +6,7 @@ import { BannerComponent } from './home/contents/banner/banner.component';
 import { IndexComponent } from './home/index/index.component';
 import { MainComponent } from './layouts/main/main.component';
 import { RouterModule } from '@angular/router';
+import { AboutHeaderComponent } from './home/contents/about-header/about-header.component';
 
 
 
@@ -15,7 +16,8 @@ import { RouterModule } from '@angular/router';
     IndexComponent,
     NavbarComponent,
     FooterComponent,
-    MainComponent
+    MainComponent,
+    AboutHeaderComponent
   ],
   imports: [
     CommonModule,
