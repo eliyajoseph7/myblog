@@ -1,4 +1,4 @@
-<nav class="bg-green-600 border-green-200 dark:bg-gray-900 rounded-t-lg">
+<nav class="bg-green-600 border-green-200 dark:bg-gray-900 rounded-t-lg z-50">
     <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <a href="#" class="flex items-center">
             <div class="-mt-1 text-3xl">🇹🇿</div>
@@ -18,12 +18,12 @@
             <ul
                 class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-inherit md:flex-row md:space-x-8 md:mt-0 md:border-0 dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
                 <li>
-                    <a href="#"
+                    <a routerLink=""
                         class="block py-2 pl-3 pr-4 text-green-600 bg-white rounded md:bg-transparent md:text-white md:p-0 dark:text-white md:dark:text-green-500"
                         aria-current="page">Home</a>
                 </li>
                 <li>
-                    <a href="#"
+                    <a [routerLink]="['/about-me']" routerLinkActive="router-link-active" 
                         class="block py-2 pl-3 pr-4 text-gray-200 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-white md:p-0 dark:text-gray-200 md:dark:hover:text-green-500 dark:hover:bg-gray-700 dark:hover:text-gray-200 md:dark:hover:bg-transparent">About</a>
                 </li>
                 <li>

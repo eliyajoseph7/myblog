@@ -9,12 +9,14 @@ import { GuestComponent } from './admin/layouts/guest/guest.component';
 import { authGuard } from './guards/auth-guard/auth.guard';
 import { loggedinGuard } from './guards/loggedin-guard/loggedin.guard';
 import { MainComponent } from './public/layouts/main/main.component';
+import { AboutComponent } from './public/about/about/about.component';
 
 const routes: Routes = [
   {
     path: '', component: MainComponent,
     children: [
-      { path: '', component: IndexComponent }
+      { path: '', component: IndexComponent },
+      { path: 'about-me', component: AboutComponent },
     ]
   },
   {

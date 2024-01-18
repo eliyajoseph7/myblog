@@ -1,8 +1,21 @@
-<div class="md:flex md:space-x-2 rounded-lg mx-2 md:mx-0 overflow-x-hidden">
-    <div class="md:float-left md:mx-4 w-full md:w-4/5 bg-white dark:bg-gray-800 rounded-lg mb-4">
-        <router-outlet></router-outlet>
-    </div>
-    <div class="md:float-right rounded-lg bg-white dark:bg-gray-800 md:w-1/5 md:h-screen">
+
+<div class="lg:flex lg:space-x-2 rounded-lg mx-2 lg:mx-0 overflow-x-hidden">
+    <div class="lg:float-left lg:mx-4 w-full lg:w-4/5 bg-white dark:bg-gray-800 rounded-lg mb-1">
+        <div class="w-full">
+            <div class="">
+                <app-navbar />
+            </div>
+            
+            <div class="lg:h-[90vh] overflow-y-auto overflow-x-hidden w-full">
+                <router-outlet></router-outlet>
+            </div>
         
+        
+        </div>
+    </div>
+    <div class="lg:float-right rounded-lg bg-white dark:bg-gray-800 w-full lg:w-1/5 lg:min-h-screen">
+        <div class="lg:h-screen lg:absolute lg:top-0 lg:bottom-0 lg:right-0">
+            jdsfk
+        </div>
     </div>
 </div>

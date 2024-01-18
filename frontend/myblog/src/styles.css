@@ -3,3 +3,23 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 /* You can add global styles to this file, and also import other style files */
+/* width */
+::-webkit-scrollbar {
+    width: 0px;
+}
+ 
+/* Track */
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: rgb(219, 230, 239);
+}
+ 
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(210, 208, 208);
+}
