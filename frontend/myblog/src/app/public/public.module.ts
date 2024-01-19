@@ -9,6 +9,8 @@ import { RouterModule } from '@angular/router';
 import { AboutHeaderComponent } from './about/contents/about-header/about-header.component';
 import { AboutComponent } from './about/about/about.component';
 import { ServicesComponent } from './home/contents/services/services.component';
+import { ProjectsComponent } from './home/contents/projects/projects.component';
+import { ContactsComponent } from './home/contents/contacts/contacts.component';
 
 
 
@@ -21,7 +23,9 @@ import { ServicesComponent } from './home/contents/services/services.component';
     MainComponent,
     AboutHeaderComponent,
     AboutComponent,
-    ServicesComponent
+    ServicesComponent,
+    ProjectsComponent,
+    ContactsComponent
   ],
   imports: [
     CommonModule,

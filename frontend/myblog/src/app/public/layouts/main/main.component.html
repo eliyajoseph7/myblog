@@ -1,21 +1,29 @@
-
 <div class="lg:flex lg:space-x-2 rounded-lg mx-2 lg:mx-0 overflow-x-hidden">
     <div class="lg:float-left lg:mx-4 w-full lg:w-4/5 bg-white dark:bg-gray-800 rounded-lg mb-1">
         <div class="w-full">
             <div class="">
                 <app-navbar />
             </div>
-            
+
             <div class="lg:h-[90vh] overflow-y-auto overflow-x-hidden w-full">
                 <router-outlet></router-outlet>
             </div>
-        
-        
+
+
         </div>
     </div>
     <div class="lg:float-right rounded-lg bg-white dark:bg-gray-800 w-full lg:w-1/5 lg:min-h-screen">
-        <div class="lg:h-screen lg:absolute lg:top-0 lg:bottom-0 lg:right-0">
-            jdsfk
+        <div class="">
+            <div class="h-16 items-center py-5 bg-inherit lg:bg-green-600 rounded-t-lg">
+                <div class="uppercase text-center lg:text-white text-xl">Prices</div>
+                <div class="flex justify-center w-full">
+                    <div class="lg:bg-white bg-green-500 w-[80px] h-[2px] text-transparent"></div>
+                </div>
+            </div>
+            <div class="lg:h-[93vh] overflow-y-auto overflow-x-hidden">
+                <div class="h-screen bg-red-50"></div>
+                <div class="h-screen bg-green-50"></div>
+            </div>
         </div>
     </div>
 </div>
