@@ -10,6 +10,7 @@ import { authGuard } from './guards/auth-guard/auth.guard';
 import { loggedinGuard } from './guards/loggedin-guard/loggedin.guard';
 import { MainComponent } from './public/layouts/main/main.component';
 import { AboutComponent } from './public/about/about/about.component';
+import { ServiceComponent } from './admin/services/service/service.component';
 
 const routes: Routes = [
   {
@@ -29,7 +30,8 @@ const routes: Routes = [
   {
     path: 'admin', component: AppComponent, canActivate: [authGuard],
     children: [
-      { path: 'dashboard', component: DashboardComponent }
+      { path: 'dashboard', component: DashboardComponent },
+      { path: 'services', component: ServiceComponent }
     ]
   }
 ];

@@ -9,6 +9,7 @@ import { SidenavComponent } from './layouts/sidenav/sidenav.component';
 import { GuestComponent } from './layouts/guest/guest.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HeaderComponent } from './layouts/header/header.component';
+import { ServiceComponent } from './services/service/service.component';
 
 
 
@@ -20,7 +21,8 @@ import { HeaderComponent } from './layouts/header/header.component';
     DashboardComponent,
     SidenavComponent,
     GuestComponent,
-    HeaderComponent],
+    HeaderComponent,
+    ServiceComponent],
   imports: [
     CommonModule,
     RouterModule,
